@@ -32,15 +32,24 @@
                 </div>
             </div>
         </div>
+        <OfferSection/>
+        <div class="trending-section-outer">
+            <div class="trending-heading">
+                <!-- <hr/> -->
+                Trending T-Shirts
+            </div>
+        </div>
     </div> 
 </template>
 
 <script>
 import HeaderSection from '@/components/HeaderSection.vue';
+import OfferSection from '@/components/OfferSection.vue';
     export default {
         name: "ShoppingPage",
         components: {
-            HeaderSection
+            HeaderSection,
+            OfferSection
         }
     }
 </script>
@@ -54,10 +63,38 @@ import HeaderSection from '@/components/HeaderSection.vue';
 .middle-section {
     max-width: 1136px;
     margin: auto;
+    .product-catogery-section {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
     .row {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    .trending-heading {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 0;
+            width: 380px;
+            background-color: #333;
+            /* left: 0; */
+            right: 0;
+            height: 2px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 0;
+            width: 410px;
+            background-color: #333;
+            left: 0;
+            height: 2px;
+        }
     }
 }
 
