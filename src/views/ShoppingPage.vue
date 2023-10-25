@@ -80,20 +80,21 @@ import OfferSection from '@/components/OfferSection.vue';
             top: 10px;
             bottom: 0;
             width: 380px;
-            background-color: #333;
-            /* left: 0; */
-            right: 0;
+            background-color: #FFC7D1;
+            right: 10px;
             height: 2px;
+            opacity: 0.5;
         }
         &::before {
             content: '';
             position: absolute;
             top: 10px;
             bottom: 0;
-            width: 410px;
-            background-color: #333;
-            left: 0;
+            width: 380px;
+            background-color: #FFC7D1;
+            left: 10px;
             height: 2px;
+            opacity: 0.5;
         }
     }
 }
