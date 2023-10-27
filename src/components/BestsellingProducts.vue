@@ -1,6 +1,6 @@
 <template>
-    <div class="trending-product-main-outer-sec">
-        <div class="trending-product-sec" v-for="(tshirt, index) in trendingTshirtData" :key="index">
+    <div class="new-product-main-outer-sec">
+        <div class="new-product-sec" v-for="(tshirt, index) in newTshirtData" :key="index">
             <div class="product-img-sec">
                 <img :src="tshirt.productImage" alt="">
             </div>
@@ -18,10 +18,10 @@
 
 <script>
     export default {
-        name:'TrendingproductionSec',
+        name:'BestsellingProducts',
         data() {
             return {
-                trendingTshirtData:[
+                newTshirtData:[
                     {
                         productImage: require('@/assets/images/trending-tshirt-1.svg'),
                         productName: 'Men Henley Neck Full Sleeve Red Wine',
@@ -50,35 +50,6 @@
                         oldPrice: 1299,
                         sizes: ['S','M','L','XL','XXL']
                     },
-                    {
-                        productImage: require('@/assets/images/trending-tshirt-1.svg'),
-                        productName: 'Men Henley Neck Full Sleeve Red Wine',
-                        price: 399,
-                        oldPrice: 1299,
-                        sizes: ['S','M','L','XL','XXL']
-                    },
-                    {
-                        productImage: require('@/assets/images/trending-tshirt-2.svg'),
-                        productName: 'Men Henley Neck Full Sleeve Red Wine',
-                        price: 399,
-                        oldPrice: 1299,
-                        sizes: ['S','M','L','XL','XXL']
-                    },
-                    {
-                        productImage: require('@/assets/images/trending-tshirt-3.svg'),
-                        productName: 'Men Henley Neck Full Sleeve Red Wine',
-                        price: 399,
-                        oldPrice: 1299,
-                        sizes: ['S','M','L','XL','XXL']
-                    },
-                    {
-                        productImage: require('@/assets/images/trending-tshirt-4.svg'),
-                        productName: 'Men Henley Neck Full Sleeve Red Wine',
-                        price: 399,
-                        oldPrice: 1299,
-                        sizes: ['S','M','L','XL','XXL']
-                    },
-
                 ] 
             }
         }
@@ -86,13 +57,13 @@
 </script>
 
 <style lang="scss" scoped>
-.trending-product-main-outer-sec {
+.new-product-main-outer-sec {
     grid-template-columns: repeat(4, 1fr);
     display: grid;
     -moz-column-gap: 16px;
     column-gap: 16px;
     row-gap: 32px;
-    .trending-product-sec {
+    .new-product-sec {
         position: relative;
         display: flex;
         flex-direction: column;
