@@ -3,6 +3,9 @@
         <div class="trending-product-sec" v-for="(tshirt, index) in trendingTshirtData" :key="index">
             <div class="product-img-sec">
                 <img :src="tshirt.productImage" alt="">
+                <div class="add-product-sec">
+                    <img src="@/assets/images/share-icon.svg" alt="">
+                </div>
             </div>
             <div class="product-detail">{{ tshirt.productName }}</div>
             <div class="product-prize">₹{{tshirt.price}} <s class="strick-text">₹{{tshirt.oldPrice}}</s></div>
@@ -86,6 +89,27 @@
 </script>
 
 <style lang="scss" scoped>
+.product-img-sec {
+    position: relative;
+}
+
+.product-img-sec:hover .add-product-sec {
+    opacity: 1;
+}
+.add-product-sec {
+    line-height: 1.5;
+    position: absolute;
+    // background-color: rgba(201, 38, 2, 0.9);
+    // padding: 12px;
+    color: #fff;
+    background: #1F1F1F4D;
+    transition: 0.3s ease-in-out all;
+    top: 0;
+    opacity: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+}
 .trending-product-main-outer-sec {
     grid-template-columns: repeat(4, 1fr);
     display: grid;
